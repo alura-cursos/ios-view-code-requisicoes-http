@@ -11,6 +11,7 @@ class MoviesViewController: UIViewController {
     
     private var filteredMovies: [Movie] = []
     private var isSearchActive: Bool = false
+    private var movieService: MovieService = MovieService()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -36,6 +37,12 @@ class MoviesViewController: UIViewController {
         setupNavigationBar()
         addSubviews()
         setupConstraints()
+        fetchMovies()
+    }
+    
+    private func fetchMovies() {
+        // Vamos chamar a funcao getMovies do movie service quando ela estiver pronta
+        movieService.getMovies()
     }
     
     private func addSubviews() {
