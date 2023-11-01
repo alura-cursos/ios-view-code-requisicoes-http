@@ -42,12 +42,15 @@ class MoviesViewController: UIViewController {
     }
     
     private func fetchMovies() {
-        // Vamos chamar a funcao getMovies do movie service quando ela estiver pronta
-        movieService.getMovies { movies in
-            guard let movies else { return }
-            DispatchQueue.main.async {
-                self.movies = movies
-                self.tableView.reloadData()
+        movieService.getMovies { result in
+            switch result {
+            case .success(let movies):
+                DispatchQueue.main.async {
+                    self.movies = movies
+                    self.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error)
             }
         }
     }
