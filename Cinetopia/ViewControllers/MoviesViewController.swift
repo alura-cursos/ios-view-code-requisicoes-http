@@ -42,7 +42,8 @@ class MoviesViewController: UIViewController {
     
     private func fetchMovies() {
         // Vamos chamar a funcao getMovies do movie service quando ela estiver pronta
-        movieService.getMovies()
+        let movies = movieService.getMovies()
+        print(movies)
     }
     
     private func addSubviews() {

@@ -8,10 +8,13 @@
 import Foundation
 
 struct MovieService {
-    func getMovies() {
+    func getMovies() -> [Movie]? {
+        
+        var movies: [Movie] = []
+        
         let urlString = "http://localhost:3000/movies"
         guard let url = URL(string: urlString) else {
-            return
+            return nil
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
@@ -20,13 +23,15 @@ struct MovieService {
             }
             
             do {
-                let movies = try JSONDecoder().decode([Movie].self, from: data)
-                print(movies)
+                movies = try JSONDecoder().decode([Movie].self, from: data)
+                //print(movies)
             } catch (let error) {
                 print(error)
             }
         }
         
         task.resume()
+        
+        return movies
     }
 }
