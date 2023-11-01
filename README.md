@@ -1,4 +1,5 @@
-![Thumbnail GitHub](https://github.com/giovannamoeller/ios-view-code-layouts-tabelas/assets/47362960/7a6d81b5-fa42-4c96-8697-76f19f5ab37c)
+![Thumbnail GitHub](https://github.com/giovannamoeller/ios-view-code-requisicoes-http/assets/47362960/5994a6f5-0d05-4f24-9050-9923ff1aed94)
+
 
 # Cinetopia
 
@@ -23,13 +24,16 @@ A aplicação Cinetopia é um aplicativo iOS que exibe a lista de filmes com mai
 - `UITableView`: Componente para construção de tabelas.
 - `UITableViewDataSource`, `UITableViewDelegate`: Protocolos para construção de tabelas.
 - `UISearchBar`, `UISearchBarDelegate`: Componente e protocolo para construção de barras de pesquisa.
-- `UITableViewCell`: Construção de células para tabelas
+- `UITableViewCell`: Construção de células para tabelas.
+- `URLSession`: Classe que permite requisições HTTP.
+- `Async/Await`: Funcionalidade que lida com operações assíncronas.
+- `Cocoapods`: Gerenciador de dependências.
 
 E muito mais! 
  
 ## 📁 Acesso ao projeto
 
-Você pode [baixar o zip](https://github.com/alura-cursos/ios-view-code-layouts-tabelas/archive/refs/heads/main.zip) com o código final do projeto ou [acessar o código fonte](https://github.com/alura-cursos/ios-view-code-layouts-tabelas/).
+Você pode [baixar o zip](https://github.com/alura-cursos/ios-view-code-requisicoes-http/archive/refs/heads/main.zip) com o código final do projeto ou [acessar o código fonte](https://github.com/alura-cursos/ios-view-code-requisicoes-http/).
 
 ## 🛠️ Abrir e rodar o projeto
 
@@ -48,4 +52,4 @@ Para rodar o seu projeto, você deve clicar no botão de play na parte superior 
 
 ## 📚 Mais informações do curso
 
-Gostou do projeto e quer conhecer mais? Você pode [acessar o curso](https://cursos.alura.com.br/course/ios-view-code-layouts-tabelas) que desenvolve o projeto!
+Gostou do projeto e quer conhecer mais? Você pode [acessar o curso](https://cursos.alura.com.br/course/ios-view-code-requisicoes-http) que desenvolve o projeto!
