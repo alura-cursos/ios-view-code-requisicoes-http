@@ -15,9 +15,16 @@ struct MovieService {
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            print(data)
-            print(response)
-            print(error)
+            guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                return
+            }
+            
+            do {
+                let movies = try JSONDecoder().decode([Movie].self, from: data)
+                print(movies)
+            } catch (let error) {
+                print(error)
+            }
         }
         
         task.resume()
